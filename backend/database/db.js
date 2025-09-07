@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const uri = 'mongodb+srv://nand_05:Nand%402005@inventory.p7kgevl.mongodb.net/?authSource=WEB_STONESTREAM&authMechanism=SCRAM-SHA-1'; // Replace with your MongoDB connection string
+const uri = 'mongodb://127.0.0.1:27017/inventory'; // Replace with your MongoDB connection string
 
 const connectDB = async () => {
   try {
