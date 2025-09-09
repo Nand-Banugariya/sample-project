@@ -19,7 +19,10 @@ connectDB();
 
 
 app.use(express.json()); 
-app.use(cors()); 
+app.use(cors({
+    origin: '*', // or your S3 URL: 'https://your-bucket-name.s3-website.<region>.amazonaws.com'
+    methods: ['GET','POST','PUT','DELETE'],
+}));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads'))); 
 
 // Routes
